@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You — Luxora Travel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Top Nav -->
+  <header class="fixed inset-x-0 top-0 z-40 backdrop-blur-md bg-white/30">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-900 to-yellow-400 shadow-lg flex items-center justify-center text-white font-semibold">L</div>
+        <div class="font-medium tracking-wide">Luxora Travel</div>
+      </div>
+      <a href="/" class="text-sm hover:underline">Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Thank You Section -->
+  <main class="pt-24 min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-2xl text-center">
+      <div class="w-16 h-16 mx-auto bg-amber-400 rounded-full flex items-center justify-center shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <h1 class="mt-6 text-3xl md:text-4xl font-light">Thank You, <span id="client-name">Valued Guest</span></h1>
+      
+      <p class="mt-4 text-lg text-gray-600">
+        Your travel vision has been received. Our lead concierge will craft a private proposal and contact you within 24 hours.
+      </p>
+
+      <p class="mt-6 text-sm text-gray-500 italic">
+        “Luxury is not in the destination — it’s in the details.” 
+      </p>
+
+      <div class="mt-10 space-y-4">
+        <p class="text-sm text-gray-500">While you wait:</p>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>• Expect a call or email from a dedicated travel curator</li>
+          <li>• All communications are confidential and encrypted</li>
+          <li>• No third parties — only our trusted global partners</li>
+        </ul>
+      </div>
+
+      <div class="mt-10">
+        <a href="/" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-black transition">
+          Return to Homepage
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-50 text-center text-sm text-gray-500">
+    © 2025 Luxora Travel — By invitation only.
+  </footer>
+
+  <script>
+    // Extract name from URL: thank-you.html?name=Sarah
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    if (name) {
+      document.getElementById('client-name').textContent = name.split(' ')[0];
+    }
+  </script>
+</body>
+</html>
